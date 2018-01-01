@@ -28,7 +28,7 @@ class UploadsController extends Controller
 
         $file = request()->file('file');
 		$upload = new Upload();
-//dd($request);
+dd($request);
 		$name = request()->file('file')->getClientOriginalName();
         $extn = request()->file('file')->getClientOriginalExtension();
         $mime = request()->file('file')->getMimeType();
