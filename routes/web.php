@@ -21,4 +21,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/upload', 'UploadsController@upload');
 
-Route::post('/upload/file', 'UploadsController@');
+Route::post('/upload/file', 'UploadsController@store');
