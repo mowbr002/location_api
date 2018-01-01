@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Data;
 use App\Models\Upload;
+use Illuminate\Support\Facades\Storage;
 
 class UploadsController extends Controller
 {
@@ -21,6 +22,31 @@ class UploadsController extends Controller
     }
 
 	public function store(Request $request){
-		dd($request);
+		$storage_dir_path = 'uploads/' . date("Y") . '/' . date("m");
+
+        Storage::makeDirectory($storage_dir_path);
+
+        $file = request()->file('file');
+		$upload = new Upload();
+dd($request);
+		$name = request()->file('file')->getClientOriginalName();
+        $extn = request()->file('file')->getClientOriginalExtension();
+        $mime = request()->file('file')->getMimeType();
+        $size = request()->file('file')->getClientSize();
+
+        $stored = $file->store($storage_dir_path);
+
+        $saved = new Files;
+
+        $saved->name        = $name;
+        $saved->location    = $stored;
+        $saved->mime        = $mime;
+        $saved->extension   = $extn;
+        $saved->size        = $size;
+        $saved->uid         = $request->user()->id;
+
+        $saved->save();
+
+        return redirect('user/uploads/' . $request->user()->id);
 	}
 }
