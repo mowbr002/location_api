@@ -48,5 +48,7 @@ dd($request);
         $saved->save();
 
         return redirect('user/uploads/' . $request->user()->id);
+
+		
 	}
 }
