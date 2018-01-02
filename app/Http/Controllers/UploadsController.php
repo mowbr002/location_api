@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Data;
 use App\Models\Upload;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 
 class UploadsController extends Controller
 {
