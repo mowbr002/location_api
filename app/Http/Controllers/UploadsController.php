@@ -47,7 +47,7 @@ class UploadsController extends Controller
         $upload->size        = $size;
         $upload->uid         = $request->user()->id;
 
-        $saved->save();
+        $upload->save();
 
         return redirect('/');
 
