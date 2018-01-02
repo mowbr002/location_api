@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 class UploadsController extends Controller
 {
     public function __construct(){
-	$this->middleware('auth');
+		$this->middleware('auth');
     }
 
     public function upload(Request $request){
@@ -46,7 +46,7 @@ class UploadsController extends Controller
         $upload->mime        = $mime;
         $upload->extension   = $extn;
         $upload->size        = $size;
-        $upload->uid         = Auth::user()->id;
+        $upload->uid         = Auth::user()->uid;
 
         $upload->save();
 
