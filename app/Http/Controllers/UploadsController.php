@@ -30,22 +30,22 @@ class UploadsController extends Controller
 
 		$file = request()->file('file');
 		$upload = new Upload();
-dd($request,$file);
-		/*$name = request()->file('file')->getClientOriginalName();
+
+		$name = request()->file('file')->getClientOriginalName();
         $extn = request()->file('file')->getClientOriginalExtension();
         $mime = request()->file('file')->getMimeType();
-        $size = request()->file('file')->getClientSize();*/
+        $size = request()->file('file')->getClientSize();
 
-        //$stored = $file->store($storage_dir_path);
-dd($request);
-        $saved = new Files;
+        $stored = $file->store($storage_dir_path);
+//dd($request);
+        //$saved = new Files;
 
-        $saved->name        = $name;
-        $saved->location    = $stored;
-        $saved->mime        = $mime;
-        $saved->extension   = $extn;
-        $saved->size        = $size;
-        $saved->uid         = $request->user()->id;
+        $upload->name        = $name;
+        $upload->location    = $stored;
+        $upload->mime        = $mime;
+        $upload->extension   = $extn;
+        $upload->size        = $size;
+        $upload->uid         = $request->user()->id;
 
         $saved->save();
 
