@@ -14,7 +14,7 @@ class CreateUploadsTable extends Migration
     public function up()
     {
         Schema::create('uploads', function (Blueprint $table) {
-            $table->increments('uid');
+            $table->increments('ulid');
             $table->timestamps();
 	        $table->softDeletes();
 	        $table->string('location')->nullable();
