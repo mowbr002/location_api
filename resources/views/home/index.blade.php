@@ -9,6 +9,6 @@
 }
 </style>
 <div class="content">
-    
+    &nbsp;
 </div>
 @endsection
