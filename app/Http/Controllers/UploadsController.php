@@ -49,7 +49,7 @@ class UploadsController extends Controller
 
         $saved->save();
 
-        return redirect('user/uploads/' . $request->user()->id);
+        return redirect('/');
 
 
 	}
