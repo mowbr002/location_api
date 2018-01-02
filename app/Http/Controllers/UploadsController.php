@@ -26,11 +26,11 @@ class UploadsController extends Controller
 
         Storage::makeDirectory($storage_dir_path);
 
-        //$file = request()->file('file');
+        $file = $request->request->file('file');
 
 		$file = request()->file('file');
 		$upload = new Upload();
-//dd($file);
+dd($file);
 		/*$name = request()->file('file')->getClientOriginalName();
         $extn = request()->file('file')->getClientOriginalExtension();
         $mime = request()->file('file')->getMimeType();
