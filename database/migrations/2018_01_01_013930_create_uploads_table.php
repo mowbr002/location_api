@@ -16,9 +16,13 @@ class CreateUploadsTable extends Migration
         Schema::create('uploads', function (Blueprint $table) {
             $table->increments('uid');
             $table->timestamps();
-	    $table->softDeletes();
-	    $table->string('location')->nullable();
-	    $table->string('mime')->nullable();
+	        $table->softDeletes();
+	        $table->string('location')->nullable();
+	        $table->string('mime')->nullable();
+            $table->string('name');
+            $table->string('extension');
+            $table->integer('uid');
+            $table->integer('size');
         });
     }
 
