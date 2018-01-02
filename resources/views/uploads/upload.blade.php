@@ -3,7 +3,7 @@
 @section('content')
 	<div class="wrap">
 	
-	<form method="post" action="{{$data->form_action}}">
+	<form method="post" action="{{$data->form_action}}" action="add" enctype="multipart/form-data">
 		{{ csrf_field() }}
 		<label for="file">File</label>
 		<input id="file" type="file" name="file">
