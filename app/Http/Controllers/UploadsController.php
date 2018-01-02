@@ -30,13 +30,13 @@ class UploadsController extends Controller
 
 		$file = request()->file('file');
 		$upload = new Upload();
-dd($file);
+//dd($file);
 		/*$name = request()->file('file')->getClientOriginalName();
         $extn = request()->file('file')->getClientOriginalExtension();
         $mime = request()->file('file')->getMimeType();
         $size = request()->file('file')->getClientSize();*/
 
-        $stored = $file->store($storage_dir_path);
+        //$stored = $file->store($storage_dir_path);
 dd($request);
         $saved = new Files;
 
