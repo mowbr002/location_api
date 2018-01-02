@@ -45,7 +45,7 @@ class UploadsController extends Controller
         $upload->mime        = $mime;
         $upload->extension   = $extn;
         $upload->size        = $size;
-        $upload->uid         = $request->user()->id;
+        $upload->uid         = Auth::user()->id;
 
         $upload->save();
 
