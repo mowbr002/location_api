@@ -7,19 +7,21 @@
             
         </div>
         <div class="flex_container">
-            <div class="index_menu_component">
-                &nbsp;
+            <div class="menu_col_1">
+                <div class="index_menu_component">
+                    &nbsp;
+                </div>
+                <div class="index_menu_component">
+                    &nbsp;
+                </div>
+                <div class="index_menu_component">
+                    &nbsp;
+                </div>
+                <div class="index_menu_component">
+                    &nbsp;
+                </div>
             </div>
-            <div class="index_menu_component">
-                &nbsp;
-            </div>
-            <div class="index_menu_component">
-                &nbsp;
-            </div>
-            <div class="index_menu_component">
-                &nbsp;
-            </div>
-            <div class="index_menu_component">
+            <div class="index_menu_feature">
                 &nbsp;
             </div>
         </div>
