@@ -1,5 +1,13 @@
 .content_wrap{
     margin: auto;
     width: 1000px;
-    border: 1px solid #ccc;
+    //border: 1px solid #ccc;
+}
+
+.flex_container{
+    display: flex;
+}
+
+.index_menu_component{
+    flex: 1 0 25%;
 }
